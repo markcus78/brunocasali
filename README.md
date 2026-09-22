@@ -63,4 +63,16 @@ npx tsc --noEmit -p tsconfig.app.json
 
 ## Deploy
 
-Non ancora pubblicato: nessun repo remoto, nessun workflow. Quando si pubblica, il modello è quello di `massimoserchia` (GitHub Pages + workflow in `.github/workflows/`), ma con dominio proprio: `base: "/"` in `vite.config.ts` (già impostato) e il `CNAME` in `public/`.
+**Online in anteprima:** <https://markcus78.github.io/brunocasali/>
+
+GitHub Pages con build da workflow (`.github/workflows/deploy.yml`): **ogni push su `main` ripubblica**, non serve altro. Il repo è pubblico perché su questo account Pages funziona solo così.
+
+### Passare al dominio proprio
+
+Sono **tre cose e vanno fatte insieme**, o il sito si rompe in silenzio:
+
+1. `vite.config.ts` → `base: "/"` (ora `"/brunocasali/"`)
+2. `public/404.html` → `pathSegmentsToKeep = 0` (ora `1`)
+3. creare `public/CNAME` con dentro il dominio, e puntare il DNS su GoDaddy verso GitHub Pages
+
+Cambiarne una sola lascia una pagina bianca o un `/privacy` rotto, senza nessun errore visibile.
