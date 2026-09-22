@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design system — Bruno Casali, sicurezza per impianti sportivi
+   Tono: tecnico, solido, concreto. Petrolio profondo (acqua/impianto) + accento ambra
+   (segnaletica di sicurezza). Niente serif: non e' uno studio legale, e' un tecnico.
+   All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 200 20% 98%;       /* grigio freddo chiarissimo */
+    --foreground: 200 30% 14%;       /* grafite bluastra */
+
+    --card: 0 0% 100%;
+    --card-foreground: 200 30% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 30% 14%;
+
+    --primary: 197 48% 19%;          /* petrolio profondo */
+    --primary-foreground: 200 20% 98%;
+
+    --secondary: 197 24% 94%;        /* azzurro-grigio chiaro */
+    --secondary-foreground: 200 30% 14%;
+
+    --muted: 197 18% 92%;
+    --muted-foreground: 200 12% 38%;
+
+    --accent: 25 88% 47%;            /* ambra: segnaletica di sicurezza */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 48%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 197 16% 86%;
+    --input: 197 16% 83%;
+    --ring: 25 88% 47%;
+
+    --radius: 0.5rem;
+
+    /* Named surfaces */
+    --navy-deep: 197 52% 13%;        /* per sezioni scure */
+    --navy-deep-foreground: 200 20% 97%;
+    --brass: 25 88% 47%;
+    --check: 158 52% 34%;            /* verde per le voci a posto */
+    --cross: 4 72% 50%;
+    --warn: 38 92% 48%;              /* giallo per il banner di lavorazione */
+    --warn-soft: 38 92% 95%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 25 88% 47%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "kern", "liga";
+  }
+}
+
+/* ============ KEYFRAMES ============ */
+
+@keyframes reveal-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ============ UTILITY CLASSES ============ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Etichetta numero sezione */
+.sec-num {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: hsl(var(--accent));
+  text-transform: uppercase;
+}
+
+/* Evidenziatore ottone su testo */
+.marker {
+  background-image: linear-gradient(180deg, transparent 62%, hsl(var(--accent) / 0.28) 62%);
+  padding: 0 0.05em;
+}
+
+/* FAQ plus icon */
+details > summary { list-style: none; cursor: pointer; }
+details > summary::-webkit-details-marker { display: none; }
+
+.faq-plus {
+  width: 14px;
+  height: 14px;
+  position: relative;
+  flex-shrink: 0;
+}
+.faq-plus::before,
+.faq-plus::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  background: hsl(var(--accent));
+}
+.faq-plus::before {
+  width: 14px;
+  height: 2px;
+  transition: transform 0.25s ease;
+}
+.faq-plus::after {
+  width: 2px;
+  height: 14px;
+}
+details[open] .faq-plus::before {
+  transform: rotate(90deg);
+}
+
+/* Texture carta leggera */
+.paper-grain {
+  background-image:
+    radial-gradient(hsl(200 30% 14% / 0.02) 1px, transparent 1px),
+    radial-gradient(hsl(200 30% 14% / 0.015) 1px, transparent 1px);
+  background-size: 18px 18px, 32px 32px;
+  background-position: 0 0, 9px 16px;
+}
+
+/* Banner "segnaposto interno — non pubblicare" (testimonianze/claim non validati) */
+.placeholder-banner {
+  border: 2px dashed hsl(var(--warn));
+  background-color: hsl(var(--warn-soft));
+  color: hsl(38 92% 24%);
+}
+
+/* Testo selezione */
+::selection {
+  background: hsl(var(--accent) / 0.28);
+  color: hsl(var(--primary));
+}

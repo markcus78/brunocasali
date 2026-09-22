@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSPP esterno per impianti sportivi a Roma | Bruno Casali</title>
+    <meta
+      name="description"
+      content="Sicurezza sul lavoro per palestre, piscine e centri sportivi: RSPP esterno, DVR, formazione e scadenze con un solo referente. Dal 1996 sugli impianti sportivi. Verifica in 2 minuti se sei in regola."
+    />
+    <meta name="author" content="Bruno Casali" />
+
+    <!-- ⚠️ Anteprima: fuori dai motori finché il sito non è definitivo e i contatti non sono reali.
+         Togliere questa riga al lancio. -->
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- TODO: favicon. Quella del template era di un altro brand ed e' stata rimossa. -->
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="RSPP esterno per impianti sportivi a Roma | Bruno Casali" />
+    <meta
+      property="og:description"
+      content="Un campo di calcio non è un ufficio. Sicurezza, DVR e formazione per impianti sportivi, dal 1996. Verifica in 2 minuti se sei in regola."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="RSPP esterno per impianti sportivi a Roma | Bruno Casali" />
+    <meta
+      name="twitter:description"
+      content="Un campo di calcio non è un ufficio. Sicurezza, DVR e formazione per impianti sportivi, dal 1996."
+    />
+    <!-- TODO prima del lancio: og:image (1200×630) e og:url con il dominio definitivo. -->
+
+    <!-- FONT: Archivo (titoli) + Inter (testo).
+         ⚠️ TODO prima del lancio: self-hostare i font, così il sito non chiama gstatic
+         e l'informativa "nessun dato raccolto" resta vera alla lettera. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Nessun pixel, nessun analytics: l'informativa dice che il sito non raccoglie dati. -->
+  </head>
+  <body>
+    <script type="text/javascript">
+      // SPA redirect handler: ricostruisce il pathname dopo il fallback di 404.html (GitHub Pages).
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&');
+            })
+            .join('?');
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+        }
+      })(window.location);
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

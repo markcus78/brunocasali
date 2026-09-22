@@ -1,0 +1,3 @@
+# Anteprima non pubblica — nessuna indicizzazione finché il sito non è definitivo.
+User-agent: *
+Disallow: /
