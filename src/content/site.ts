@@ -166,9 +166,9 @@ export const TEST = {
 
   tipoDomanda: "Che tipo di impianto gestisci?",
   tipi: [
-    { id: "mono", label: "Monoattività", desc: "Solo palestra, solo campi sportivi, solo centro fitness" },
+    { id: "mono", label: "Monoattività", desc: "Solo palestra, solo campi sportivi, solo piscina, solo centro fitness" },
     { id: "poli", label: "Polivalente", desc: "Più discipline, più spazi, più attrezzature" },
-    { id: "piscina", label: "Con piscina", desc: "Qualunque impianto con una vasca, anche solo piscina" },
+    { id: "piscina", label: "Con piscina", desc: "Se c'è una vasca scegli questa, anche se è l'unica attività" },
   ],
 
   /** Ogni domanda: "sì" = sei coperto. "non lo so" conta come scoperto, ed è voluto. */
@@ -333,7 +333,7 @@ export const SPECIALIZZAZIONE = {
     {
       titolo: "La vasca",
       testo:
-        "Rischio chimico da cloro e trattamento acque, rischio biologico e legionella negli spogliatoi, microclima indoor, scivolamento, piano vasca e autocontrollo. Nessuna di queste voci esiste in un'azienda normale, e sono tutte obblighi.",
+        "Rischio chimico e gestione degli impianti per il trattamento dell'acqua, rischio biologico e legionella negli spogliatoi, microclima indoor, scivolamento, piano vasca e autocontrollo. Nessuna di queste voci esiste in un'azienda normale, e sono tutte obblighi.",
     },
     {
       titolo: "La sala",
@@ -361,7 +361,7 @@ export const PREZZO = {
   fasce: [
     {
       titolo: "Impianto monoattività",
-      desc: "Una sola disciplina: solo palestra, solo campi sportivi, solo centro fitness.",
+      desc: "Una sola disciplina: solo palestra, solo campi sportivi, solo piscina, solo centro fitness.",
       incluso: "Tutta la sicurezza negli ambienti di lavoro: DVR, incarico RSPP, formazione, scadenze.",
     },
     {
