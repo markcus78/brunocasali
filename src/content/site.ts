@@ -35,9 +35,7 @@ export const CONFIG = {
    *  passerà al dominio proprio (oggi il sito sta su una project page). */
   dominio: "casalibruno.it",
   /** Cellulare in formato internazionale senza spazi né +.
-   *  Da "presentazione 1.docx" e "presentazione 4 condomini.docx": +39 335 462 299.
-   *  ⚠️ Sono 9 cifre (335 + 6): insolito per un mobile italiano. Da guardare prima del lancio,
-   *  perché un numero sbagliato spegne in silenzio l'unica CTA del sito. */
+   *  È quello che Bruno firma nelle sue email di presentazione, confermato il 24/09/2026. */
   whatsapp: "39335462299",
   /** Come si legge il numero in pagina. */
   telefonoVisibile: "335 462 299",
