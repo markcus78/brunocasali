@@ -32,7 +32,7 @@ Il sito mostra un banner giallo in cima finché mancano dei dati. Si compilano i
 
 | campo | cosa | nota |
 |---|---|---|
-| `dominio` | **`casalibruno.it`** | ⚠️ **cognome prima**: il repo si chiama `brunocasali`, il dominio no. Va messo anche in `public/CNAME` |
+| `dominio` | **`brunocasali.it`** | va messo anche in `public/CNAME` quando si passa al dominio proprio |
 | `whatsapp` | `39` + cellulare, senza spazi né `+` | è la CTA principale: senza, il bottone resta spento |
 | `telefonoVisibile` | come si legge in pagina | |
 | `email` | email dell'attività | ⚠️ **non** `bruno@wellnesstown.it`: è un indirizzo WT |

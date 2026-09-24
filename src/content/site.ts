@@ -28,12 +28,10 @@
 export const DA_DEFINIRE = "DA_DEFINIRE";
 
 export const CONFIG = {
-  /** ⚠️ ATTENZIONE ALL'ORDINE: il dominio è "casalibruno.it" — COGNOME PRIMA.
-   *  Il repo, la cartella e il brand nel vault si chiamano invece "brunocasali".
-   *  Non è un errore di battitura: sono due cose diverse e si sbaglia facilmente.
-   *  Confermato da Marco il 24/09/2026. Serve anche per public/CNAME quando si
-   *  passerà al dominio proprio (oggi il sito sta su una project page). */
-  dominio: "casalibruno.it",
+  /** Dominio registrato da Bruno: brunocasali.it (confermato da Marco il 24/09/2026).
+   *  Serve anche per public/CNAME quando si passerà al dominio proprio: oggi il sito
+   *  sta su una project page e questo campo non è letto da nessuna parte della pagina. */
+  dominio: "brunocasali.it",
   /** Cellulare in formato internazionale senza spazi né +.
    *  È quello che Bruno firma nelle sue email di presentazione, confermato il 24/09/2026. */
   whatsapp: "39335462299",
