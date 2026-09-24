@@ -418,7 +418,6 @@ export const CONTATTI = {
 // ============================================================================
 export const FOOTER = {
   nome: "Bruno Casali",
-  sede: "Via Erode Attico, 30 — 00178 Roma",
   claim: "RSPP esterno e consulenza sicurezza per impianti sportivi — Roma e provincia",
   legale:
     "Le informazioni presenti su questo sito hanno carattere informativo e non sostituiscono una valutazione dei rischi effettuata sul posto ai sensi del D.Lgs. 81/2008.",
@@ -433,8 +432,9 @@ export const PRIVACY = {
   blocchi: [
     {
       titolo: "Chi tratta i tuoi dati",
+      // L'indirizzo viene da CONFIG: e' scritto in un posto solo.
       testo:
-        "Il titolare del trattamento è Bruno Casali, con sede in Via Erode Attico, 30 — 00178 Roma. Per qualunque richiesta relativa ai tuoi dati puoi scrivere all'indirizzo email indicato in fondo a questa pagina.",
+        `Il titolare del trattamento è Bruno Casali, con sede in ${CONFIG.indirizzo}. Per qualunque richiesta relativa ai tuoi dati puoi scrivere all'indirizzo email indicato in fondo a questa pagina.`,
     },
     {
       titolo: "Quali dati raccoglie questo sito",

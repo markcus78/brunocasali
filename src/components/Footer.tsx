@@ -35,7 +35,7 @@ export default function Footer() {
         <div className="mt-10 space-y-2 border-t border-white/10 pt-6 text-xs leading-relaxed text-navy-foreground/55">
           <p>{FOOTER.legale}</p>
           <p>
-            {FOOTER.nome} · P.IVA <Valore v={CONFIG.piva} /> · {FOOTER.sede}
+            {FOOTER.nome} · P.IVA <Valore v={CONFIG.piva} /> · {CONFIG.indirizzo}
           </p>
         </div>
       </div>
