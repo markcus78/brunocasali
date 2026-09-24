@@ -30,8 +30,10 @@ export const CONFIG = {
    *  NON usare bruno@wellnesstown.it (è un indirizzo WT). Se in futuro si vuole
    *  un indirizzo sul dominio, si cambia qui. */
   email: "casali.bruno@gmail.com",
-  /** P.IVA / C.F. per il footer legale. */
-  piva: DA_DEFINIRE,
+  /** P.IVA, dai dati ufficiali passati da Marco il 24/09/2026. */
+  piva: "18478801006",
+  /** Sede: dai dati ufficiali del 24/09/2026. Va nel footer e nell'informativa. */
+  indirizzo: "Via Erode Attico, 30 — 00178 Roma",
 };
 
 export const mancaQualcosa = Object.values(CONFIG).some((v) => v === DA_DEFINIRE);
@@ -44,8 +46,7 @@ export const mancaQualcosa = Object.values(CONFIG).some((v) => v === DA_DEFINIRE
 export const AVVISO_INTERNO = {
   titolo: "Bozza in lavorazione — non è ancora il sito definitivo",
   righe: [
-    "Da confermare: la grafia esatta del dominio e la partita IVA.",
-    "Recapiti presi dalle email di presentazione di Bruno — 335 462 299 · casali.bruno@gmail.com. Il numero va ricontrollato: così com'è ha 9 cifre.",
+    "Da confermare: la grafia esatta del dominio.",
     "Qualifiche: da decidere insieme quali indicare in pagina (incarico RSPP, abilitazione da formatore) e con che formulazione. Per ora non ce n'è nessuna.",
     "Prezzi: la pagina descrive il modello a due fasce ma non espone cifre, perché il prezzo d'ingresso non è ancora stato deciso.",
     "Mancano le foto di Bruno e di qualche impianto.",
@@ -145,9 +146,9 @@ export const TEST = {
 
   tipoDomanda: "Che tipo di impianto gestisci?",
   tipi: [
-    { id: "mono", label: "Monoattività", desc: "Solo palestra, solo campo, solo centro fitness" },
+    { id: "mono", label: "Monoattività", desc: "Solo palestra, solo campi sportivi, solo centro fitness" },
     { id: "poli", label: "Polivalente", desc: "Più discipline, più spazi, più attrezzature" },
-    { id: "piscina", label: "Con piscina", desc: "Polivalente o meno, ma con vasca" },
+    { id: "piscina", label: "Con piscina", desc: "Qualunque impianto con una vasca, anche solo piscina" },
   ],
 
   /** Ogni domanda: "sì" = sei coperto. "non lo so" conta come scoperto, ed è voluto. */
@@ -340,12 +341,12 @@ export const PREZZO = {
   fasce: [
     {
       titolo: "Impianto monoattività",
-      desc: "Una sola disciplina: solo palestra, solo campo, solo centro fitness.",
+      desc: "Una sola disciplina: solo palestra, solo campi sportivi, solo centro fitness.",
       incluso: "Tutta la sicurezza negli ambienti di lavoro: DVR, incarico RSPP, formazione, scadenze.",
     },
     {
       titolo: "Polivalente o con piscina",
-      desc: "Più discipline e più spazi, oppure presenza di vasca.",
+      desc: "Più discipline e più spazi, oppure presenza di vasca — anche quando la vasca è l'unica attività.",
       incluso:
         "Tutto quello sopra più la sicurezza specifica dell'attività sportiva: normative tecniche, piano vasca, autocontrollo, attrezzature.",
     },
@@ -417,6 +418,7 @@ export const CONTATTI = {
 // ============================================================================
 export const FOOTER = {
   nome: "Bruno Casali",
+  sede: "Via Erode Attico, 30 — 00178 Roma",
   claim: "RSPP esterno e consulenza sicurezza per impianti sportivi — Roma e provincia",
   legale:
     "Le informazioni presenti su questo sito hanno carattere informativo e non sostituiscono una valutazione dei rischi effettuata sul posto ai sensi del D.Lgs. 81/2008.",
@@ -432,7 +434,7 @@ export const PRIVACY = {
     {
       titolo: "Chi tratta i tuoi dati",
       testo:
-        "Il titolare del trattamento è Bruno Casali. Per qualunque richiesta relativa ai tuoi dati puoi scrivere all'indirizzo email indicato in fondo a questa pagina.",
+        "Il titolare del trattamento è Bruno Casali, con sede in Via Erode Attico, 30 — 00178 Roma. Per qualunque richiesta relativa ai tuoi dati puoi scrivere all'indirizzo email indicato in fondo a questa pagina.",
     },
     {
       titolo: "Quali dati raccoglie questo sito",
