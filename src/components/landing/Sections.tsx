@@ -2,7 +2,7 @@ import { useReveal } from "@/hooks/useReveal";
 import Autovalutazione from "@/components/Autovalutazione";
 import {
   AVVISO_INTERNO, CHI_SONO, CONTATTI, CONFIG, DA_DEFINIRE, DUE_STRADE, FAQ, HERO,
-  PREZZO, PROBLEM, SERVIZIO, SPECIALIZZAZIONE, TEST, TRUST_BAR, mancaQualcosa,
+  PREZZO, PROBLEM, SERVIZIO, SPECIALIZZAZIONE, TEST, TRUST_BAR, mostraAvviso,
 } from "@/content/site";
 import {
   AlertTriangle, ArrowRight, Check, ClipboardCheck, Dumbbell, Flag, Mail,
@@ -31,7 +31,7 @@ function Occhiello({ children }: { children: React.ReactNode }) {
 /* ---------- BANNER INTERNO (solo finché mancano i dati) ---------- */
 
 export function AvvisoInterno() {
-  if (!mancaQualcosa) return null;
+  if (!mostraAvviso) return null;
   return (
     <div className="bg-warn-soft border-b-2 border-dashed border-warn">
       <div className="container py-4">

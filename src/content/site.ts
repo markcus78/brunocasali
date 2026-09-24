@@ -3,11 +3,22 @@
  *
  * Tutto il copy vive qui. I componenti non contengono testo.
  *
- * ⚠️ REGOLA FERREA DI QUESTO SITO: nessun claim che non sia verificabile.
- *    L'unica prova che abbiamo oggi è "dal 1996" e il tipo di strutture su cui Bruno
- *    ha lavorato. NON aggiungere: numero di clienti, nomi di strutture seguite,
+ * ⚠️ REGOLA FERREA 1 — nessun claim che non sia verificabile.
+ *    L'unica prova che abbiamo è "dal 1996" e il tipo di strutture su cui Bruno ha
+ *    lavorato. NON aggiungere: numero di clienti, nomi di strutture seguite,
  *    testimonianze, certificazioni ISO, percentuali. Finché non ci sono, non si scrivono.
- *    Fonte di tutto ciò che segue: la call Marco–Bruno del 22/09/2026 (verbale nel vault).
+ *
+ * ⚠️ REGOLA FERREA 2 — niente titoli, abilitazioni o attestati in pagina.
+ *    Decisione di Marco del 24/09/2026: "non è il caso di esibirli, possono generare
+ *    confusione perché le normative nel frattempo sono cambiate e bisognerebbe poi
+ *    spiegare che uno sostituisce l'altro". Vale per moduli RSPP A/B/C, qualifica
+ *    formatore (D.I. 6/3/13), aggiornamenti quinquennali, attestati di ogni tipo —
+ *    qui, su LinkedIn e in qualunque materiale. Vale anche per i RUOLI passati citati
+ *    come titolo ("ho fatto l'RSPP presso..."): si racconta il lavoro, non la qualifica.
+ *    ✅ Resta "RSPP esterno" dove descrive il SERVIZIO che Bruno vende oggi: quello non
+ *    è un titolo esibito, è il mestiere, e toglierlo vorrebbe dire non dire cosa fa.
+ *
+ * Fonte di tutto ciò che segue: la call Marco–Bruno del 22/09/2026 (verbale nel vault).
  */
 
 // ============================================================================
@@ -17,8 +28,12 @@
 export const DA_DEFINIRE = "DA_DEFINIRE";
 
 export const CONFIG = {
-  /** Dominio senza protocollo, es. "brunocasali.it". Serve anche per public/CNAME. */
-  dominio: DA_DEFINIRE,
+  /** ⚠️ ATTENZIONE ALL'ORDINE: il dominio è "casalibruno.it" — COGNOME PRIMA.
+   *  Il repo, la cartella e il brand nel vault si chiamano invece "brunocasali".
+   *  Non è un errore di battitura: sono due cose diverse e si sbaglia facilmente.
+   *  Confermato da Marco il 24/09/2026. Serve anche per public/CNAME quando si
+   *  passerà al dominio proprio (oggi il sito sta su una project page). */
+  dominio: "casalibruno.it",
   /** Cellulare in formato internazionale senza spazi né +.
    *  Da "presentazione 1.docx" e "presentazione 4 condomini.docx": +39 335 462 299.
    *  ⚠️ Sono 9 cifre (335 + 6): insolito per un mobile italiano. Da guardare prima del lancio,
@@ -36,7 +51,18 @@ export const CONFIG = {
   indirizzo: "Via Erode Attico, 30 — 00178 Roma",
 };
 
+/**
+ * Interruttore del banner di lavorazione.
+ * Si spegne a mano (BOZZA = false) quando Marco decide che il sito è pronto:
+ * NON deve sparire da solo perché si è riempito un campo di CONFIG, altrimenti
+ * il sito sembra finito mentre mancano ancora foto e decisioni sui prezzi.
+ * `mancaQualcosa` resta come rete di sicurezza: se un dato è ancora segnaposto,
+ * il banner compare comunque, anche a BOZZA spento.
+ */
+export const BOZZA = true;
+
 export const mancaQualcosa = Object.values(CONFIG).some((v) => v === DA_DEFINIRE);
+export const mostraAvviso = BOZZA || mancaQualcosa;
 
 /**
  * Nota di stato mostrata in cima alla pagina finché la bozza non è completa.
@@ -46,8 +72,6 @@ export const mancaQualcosa = Object.values(CONFIG).some((v) => v === DA_DEFINIRE
 export const AVVISO_INTERNO = {
   titolo: "Bozza in lavorazione — non è ancora il sito definitivo",
   righe: [
-    "Da confermare: la grafia esatta del dominio.",
-    "Qualifiche: da decidere insieme quali indicare in pagina (incarico RSPP, abilitazione da formatore) e con che formulazione. Per ora non ce n'è nessuna.",
     "Prezzi: la pagina descrive il modello a due fasce ma non espone cifre, perché il prezzo d'ingresso non è ancora stato deciso.",
     "Mancano le foto di Bruno e di qualche impianto.",
   ],
@@ -327,7 +351,7 @@ export const SPECIALIZZAZIONE = {
     },
   ],
   chiusura:
-    "Io questo mestiere lo faccio dal 1996 e l'ho fatto dentro gli impianti, non sopra di essi: come RSPP e come responsabile tecnico su complessi sportivi. Non devo studiare il tuo settore, ci lavoro.",
+    "Io questo mestiere lo faccio dal 1996 e l'ho fatto dentro gli impianti, non sopra di essi: sugli impianti tecnologici, sulle strutture e sulla sicurezza di complessi sportivi veri. Non devo studiare il tuo settore, ci lavoro.",
 };
 
 // ============================================================================
@@ -363,7 +387,7 @@ export const CHI_SONO = {
   titolo: "Bruno Casali",
   righe: [
     "Lavoro sulla sicurezza degli impianti sportivi dal 1996. Trent'anni sullo stesso mestiere e sullo stesso tipo di strutture: campi, palestre, centri fitness, piscine, complessi polivalenti.",
-    "Ho lavorato dentro complessi sportivi polifunzionali come responsabile tecnico e come RSPP, non come consulente che passa una volta l'anno. E il mondo del fitness l'ho vissuto anche dall'altra parte, da istruttore. Vuol dire che quando entro in un impianto so già dove guardare, e quando mi racconti un problema non me lo devo far spiegare due volte.",
+    "Ho lavorato dentro complessi sportivi polifunzionali, occupandomi degli impianti tecnologici, della gestione tecnica e della sicurezza — non come consulente che passa una volta l'anno. E il mondo del fitness l'ho vissuto anche dall'altra parte, da istruttore. Vuol dire che quando entro in un impianto so già dove guardare, e quando mi racconti un problema non me lo devo far spiegare due volte.",
     "Lavoro con centri sportivi, palestre, piscine, società sportive, ASD e SSD, su Roma e provincia — perché la sicurezza si fa venendo sul posto, non a distanza.",
   ],
 };
